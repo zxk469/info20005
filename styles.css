@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    color:black;
+    background-color:gray
+}
+/* Nav Bar*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color:floralwhite;
+
+}
