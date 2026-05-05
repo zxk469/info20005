@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - HereBags</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">HereBags</h1>
+    <nav>
+        <a href="website.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+</header>
+
+<section class="shop">
+    <h2>Our Collection</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="https://www.thehorse.com.au/cdn/shop/files/14_2589_732x.jpg?v=1773890590" alt="Bag 1">
+            <h3>Clementine Bag</h3>
+            <p>$299</p>
+            <button onclick="addToCart('Clementine Bag', 299)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://www.thehorse.com.au/cdn/shop/files/Untitleddesign_37.png?v=1773190538&width=1200" alt="Bag 2">
+            <h3>Fin Drawstring Bag</h3>
+            <p>$159</p>
+            <button onclick="addToCart('Fin Drawstring Bag', 159)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://www.thehorse.com.au/cdn/shop/files/TillyCoffeeTSB3_5.jpg?v=1770684332&width=1200" alt="Bag 3">
+            <h3>Tilly Bag</h3>
+            <p>$299</p>
+            <button onclick="addToCart('Tilly Bag', 299)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://www.thehorse.com.au/cdn/shop/files/EsmeToteBlackESM1_1.jpg?v=1770684953&width=1200" alt="Bag 4">
+            <h3>Esme Bag</h3>
+            <p>$249</p>
+            <button onclick="addToCart('Esme Bag', 249)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+    
+</body>
+</html>
