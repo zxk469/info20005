@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - HereBags</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">HereBags</h1>
+
+    <nav>
+        <a href="website.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span></a>
+        <a href="website.html#about">About</a>
+        <a href="website.html#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="cart-page">
+    <h2>Your Cart</h2>
+
+    <div id="cart-items"></div>
+
+    <h2 id="cart-total">Total: $0</h2>
+
+    <div class="delivery-form">
+        <h3>Delivery Details</h3>
+
+        <input id="full-name" type="text" placeholder="Full Name">
+        <input id="address" type="text" placeholder="Address">
+        <input id="city" type="text" placeholder="City">
+        <input id="postcode" type="text" placeholder="Postcode">
+    </div>
+
+    <div class="payment-section">
+        <h3>Payment Method</h3>
+
+        <label>
+            <input type="radio" name="payment" value="Credit Card">
+            Credit Card
+        </label>
+
+        <label>
+            <input type="radio" name="payment" value="PayPal">
+            PayPal
+        </label>
+
+        <label>
+            <input type="radio" name="payment" value="Apple Pay">
+            Apple Pay
+        </label>
+    </div>
+
+    <div class="cart-buttons">
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+    
+</body>
+</html>
