@@ -13,36 +13,62 @@
     <nav>
         <a href="website.html">Home</a>
         <a href="shop.html">Shop</a>
-        <a href="#">Cart (<span id="cart-count">0</span>)</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="website.html#about">About</a>
+        <a href="website.html#contact">Contact</a>
     </nav>
 </header>
 
 <section class="shop">
     <h2>Our Collection</h2>
     <div class="product-grid">
-        <div class="product">
-            <img src="https://www.thehorse.com.au/cdn/shop/files/14_2589_732x.jpg?v=1773890590" alt="Bag 1">
+        <div class="product"> 
+            <img id="clementine-img" src="https://www.thehorse.com.au/cdn/shop/files/14_2589_732x.jpg?v=1773890590" alt="Clementine Bag">
+
+            <div class="slider-buttons">
+                <button onclick="changeImage('clementine-img', clementineImages, -1)">Previous</button>
+                <button onclick="changeImage('clementine-img', clementineImages, 1)">Next</button>
+            </div>
+
             <h3>Clementine Bag</h3>
             <p>$299</p>
             <button onclick="addToCart('Clementine Bag', 299)">Add to Cart</button>
         </div>
 
         <div class="product">
-            <img src="https://www.thehorse.com.au/cdn/shop/files/Untitleddesign_37.png?v=1773190538&width=1200" alt="Bag 2">
+            <img id="fin-img" src="https://www.thehorse.com.au/cdn/shop/files/Untitleddesign_37.png?v=1773190538&width=1200" alt="Fin Drawstring Bag">
+
+            <div class="slider-buttons">
+                <button onclick="changeImage('fin-img', finImages, -1)">Previous</button>
+                <button onclick="changeImage('fin-img', finImages, 1)">Next</button>
+            </div>
+
             <h3>Fin Drawstring Bag</h3>
             <p>$159</p>
             <button onclick="addToCart('Fin Drawstring Bag', 159)">Add to Cart</button>
         </div>
 
         <div class="product">
-            <img src="https://www.thehorse.com.au/cdn/shop/files/TillyCoffeeTSB3_5.jpg?v=1770684332&width=1200" alt="Bag 3">
+            <img id="tilly-img" src="https://www.thehorse.com.au/cdn/shop/files/TillyCoffeeTSB3_5.jpg?v=1770684332&width=1200" alt="Tilly Bag">
+
+            <div class="slider-buttons">
+                <button onclick="changeImage('tilly-img', tillyImages, -1)">Previous</button>
+                <button onclick="changeImage('tilly-img', tillyImages, 1)">Next</button>
+            </div>
+
             <h3>Tilly Bag</h3>
             <p>$299</p>
             <button onclick="addToCart('Tilly Bag', 299)">Add to Cart</button>
-        </div>
+        </div> 
 
         <div class="product">
-            <img src="https://www.thehorse.com.au/cdn/shop/files/EsmeToteBlackESM1_1.jpg?v=1770684953&width=1200" alt="Bag 4">
+            <img id="esme-img" src="https://www.thehorse.com.au/cdn/shop/files/EsmeToteBlackESM1_1.jpg?v=1770684953&width=1200" alt="Esme Bag">
+
+            <div class="slider-buttons">
+                <button onclick="changeImage('esme-img', esmeImages, -1)">Previous</button>
+                <button onclick="changeImage('esme-img', esmeImages, 1)">Next</button>
+            </div>
+            
             <h3>Esme Bag</h3>
             <p>$249</p>
             <button onclick="addToCart('Esme Bag', 249)">Add to Cart</button>
