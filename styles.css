@@ -106,3 +106,36 @@ footer {
 .product button:hover {
     background: #444; 
 }
+
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.slider-buttons button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+#toast {
+    visibility: hidden;
+    min-width: 260px;
+    background: black;
+    color:white;
+    text-align: center;
+    padding: 16 px 24px;
+    position: fixed;
+    z-index: 9999;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 4px;
+}
+
+#toast.show {
+    visibility: visible;
+}

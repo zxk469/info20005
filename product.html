@@ -3,9 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Product - HereBags</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<header>
+    <h1 class="logo">HereBags</h1>
+
+    <nav>
+        <a href="website.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="website.html#about">About</a>
+        <a href="website.html#contact">Contact</a>
+    </nav>
+ </header>
+ 
+ <section class="product-page">
+
+    <div class="thumbnail-column">
+        <img id="thumb1" src="" alt="">
+        <img id="thumb2" src="" alt="">
+        <img id="thumb3" src="" alt="">
+        <img id="thumb4" src="" alt="">
+    </div>
+
+    <div class="main-product-image">
+        <img id="main-product-image" src="" alt="">
+    </div>
+
+    <div class="product-info">
+        <h2 id="product-name"></h2>
+
+        <p class="price" id="product-price"></p>
+
+        <p id="product-description">Handmade luxury bag crafted with conscious design and premium materials.</p>
+
+        <button id="add-product-button">Add to Cart</button>
+    </div>
+ </section>
+
+ <script src="script.js"></script>
+
+ <script>
     
+const params = new URLSearchParams(window.location.search);
+const product = params.get("product");
+
+const products = {
+
+    clementine: {
+        name: "Clementine Bag",
+        price: 299,
+        images: clementineImages
+    },
+
+    fin: {
+        name: "Fin Drawstring Bag",
+        price: 159,
+        images: finImages
+    },
+
+    tilly: {
+        name: "Tilly Bag",
+        price: 299,
+        images: tillyImages
+    },
+
+    esme: {
+        name: "Esme Bag",
+        price: 249,
+        images: esmeImages
+    }
+};
+
+const currentProduct = products[product];
+if (currentProduct){
+
+    document.getElementById("product-name").innerText =currentProduct.name;
+    document.getElementById("product-price").innerText = "$" + currentProduct.price;
+    document.getElementById("main-product-image").src = currentProduct.images[0];
+    document.getElementById("thumb1").src = currentProduct.images[0];
+    document.getElementById("thumb2").src = currentProduct.images[1];
+    document.getElementById("thumb3").src = currentProduct.images[2];
+    document.getElementById("thumb4").src = currentProduct.images[3];
+
+    document.getElementById("thumb1").onclick = () =>
+    document.getElementById("main-product-image").src =currentProduct.images[0];
+
+    document.getElementById("thumb2").onclick = () =>
+    document.getElementById("main-product-image").src =currentProduct.images[1];
+
+    document.getElementById("thumb3").onclick = () =>
+    document.getElementById("main-product-image").src =currentProduct.images[2];
+
+    document.getElementById("thumb4").onclick = () =>
+    document.getElementById("main-product-image").src =currentProduct.images[3];
+
+    document.getElementById("add-product-button").onclick = 
+    function() {
+        addToCart(
+            currentProduct.name,
+            currentProduct.price
+        );
+    };
+
+}
+
+</script>
 </body>
 </html>
