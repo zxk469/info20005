@@ -8,58 +8,105 @@
 </head>
 <body>
 
-<header>
-    <h1 class="logo">HereBags</h1>
+<header class="checkout-header">
 
-    <nav>
+    <h1 class="checkout-logo">HereBags</h1>
+
+    <nav class="checkout-nav">
         <a href="website.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="cart.html">Cart (<span id="cart-count">0</span></a>
-        <a href="website.html#about">About</a>
-        <a href="website.html#contact">Contact</a>
+        <a href="shop.html">Continue Shopping</a>
+        <a href="cart.html">Checkout</a>
     </nav>
 </header>
 
-<section class="cart-page">
-    <h2>Your Cart</h2>
+<div class="checkout-container">
 
+    <!--Left side-->
+
+    <div class="checkout-left">
+
+        <div class="free-shipping-box">
+            <h3>Free Shipping</h3>
+            <p>You have qualified for free shipping!</p>
+        </div>
+
+        <h2>Contact</h2>
+
+        <input id ="email" type="email" placeholder="Email">
+
+        <h2>Delivery</h2>
+
+        <select>
+            <option>Australia</option>
+        </select>
+
+        <div class="two-column">
+            <input id="first-name" placeholder="First Name">
+            <input id="last-name" placeholder="Last Name">
+        </div>
+
+        <input id="address" placeholder="Address">
+
+        <div class="two-column">
+            <input id="city" placeholder="City">
+            <input id="postcode" placeholder="Postcode">
+        </div>
+
+        <input id="phone" placeholder="Phone">
+
+        <h2>Payment</h2>
+
+        <div class="payment-card">
+
+            <label>
+                <input type="radio" name="payment" checked>
+                Credit Card
+            </label>
+
+            <input placeholder="Card Number">
+
+            <div class="two-column">
+                <input placeholder="MM / YY">
+                <input placeholder="CVV">
+            </div>
+
+            <input placeholder="Name on Card">
+        </div>
+
+        <div class="paypal-option">
+            <label>
+                <input type="radio" name="payment">
+                Paypal
+            </label>
+        </div>
+
+        <button class="pay-now-btn" onclick="checkout()">
+            Pay Now
+        </button>
+</div>
+
+<!--Right side-->
+
+<div class="checkout-right">
+    <h2>Order Summary</h2>
     <div id="cart-items"></div>
 
-    <h2 id="cart-total">Total: $0</h2>
-
-    <div class="delivery-form">
-        <h3>Delivery Details</h3>
-
-        <input id="full-name" type="text" placeholder="Full Name">
-        <input id="address" type="text" placeholder="Address">
-        <input id="city" type="text" placeholder="City">
-        <input id="postcode" type="text" placeholder="Postcode">
+    <div class="discount-box">
+        <input placeholder="Discount code">
+        <button>Apply</button>
     </div>
 
-    <div class="payment-section">
-        <h3>Payment Method</h3>
-
-        <label>
-            <input type="radio" name="payment" value="Credit Card">
-            Credit Card
-        </label>
-
-        <label>
-            <input type="radio" name="payment" value="PayPal">
-            PayPal
-        </label>
-
-        <label>
-            <input type="radio" name="payment" value="Apple Pay">
-            Apple Pay
-        </label>
+    <div class="summary-row">
+        <span>Shipping</span>
+        <span>FREE</span>
     </div>
 
-    <div class="cart-buttons">
-        <button onclick="checkout()">Checkout</button>
-        <button onclick="clearCart()">Clear Cart</button>
+    <div class="summary-row total-row">
+        <span>Total</span>
+        <span id="cart-total">$0</span>
     </div>
-</section>
+</div>
+</div>
 
 <script src="script.js"></script>
     

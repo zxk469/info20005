@@ -31,10 +31,11 @@ const esmeImages = [
 ];
 
 // add product to cart
-function addToCart(name, price) {
+function addToCart(name, price, image) {
     cart.push({
         name: name,
-        price: price
+        price: price,
+        image: image
     });
     
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -74,7 +75,9 @@ function displayCartItems() {
         total += item.price;
 
         cartItemsContainer.innerHTML += `
-        <div class="cart-item">
+        <div class="cart-item checkout-cart-item">
+        <img src="${item.image}" alt="${item.name}">
+
             <div>
                 <h3>${item.name}</h3>
                 <p>$${item.price}</p>               
@@ -107,7 +110,8 @@ function displayCartItems() {
 
     //checkout
     function checkout() {
-        const fullName = document.getElementById("full-name");
+        const firstName = document.getElementById("first-name");
+        const lastName = document.getElementById("last-name");
         const address = document.getElementById("address");
         const city = document.getElementById("city");
         const postcode = document.getElementById("postcode");
@@ -171,7 +175,7 @@ function displayCartItems() {
         clementine: {
             name: "Clementine Bag",
             price: 299,
-            description: "A soft sculptural bag designed for refined everyday elegance."
+            description: "A soft sculptural bag designed for refined everyday elegance.",
             images: clementineImages
         },
         fin: {
@@ -208,12 +212,12 @@ function displayCartItems() {
         currentProduct = products[productKey];
 
         document.getElementById("product-name").innerText = currentProduct.name;
-        document.getElementById("product-price").innerText = currentProduct.price;
+        document.getElementById("product-price").innerText = "$" + currentProduct.price;
         document.getElementById("product-description").innerText = currentProduct.description;
         document.getElementById("main-product-image").src = currentProduct.images[0];
 
         document.getElementById("add-product-button").onclick = function () {
-            addToCart(currentProduct.name, currentProduct.price);
+            addToCart(currentProduct.name, currentProduct.price, currentProduct.images[0]);
         };
 
         const thumbnails = document.getElementById("thumbnail-column");
