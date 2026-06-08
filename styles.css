@@ -173,7 +173,7 @@ footer {
 
 .checkout-container {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 3fr 2fr;
     gap: 30px;
 }
 

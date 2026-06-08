@@ -228,27 +228,33 @@ function displayCartItems() {
     let currentProductImageIndex = 0;
 
     function loadProductPage() {
-        const params = new URLSearchParams(window.location.search);
-        const productKey = params.get("product") || "clementine";
-
-        if (!productKey || !products[productKey]) {
+        const productNameElement = document.getElementById("product-name");
+    
+        if (!productNameElement) {
             return;
         }
-
+    
+        const params = new URLSearchParams(window.location.search);
+        const productKey = params.get("product") || "clementine";
+    
+        if (!products[productKey]) {
+            return;
+        }
+    
         currentProduct = products[productKey];
-
+    
         document.getElementById("product-name").innerText = currentProduct.name;
         document.getElementById("product-price").innerText = "$" + currentProduct.price;
         document.getElementById("product-description").innerText = currentProduct.description;
         document.getElementById("main-product-image").src = currentProduct.images[0];
-
+    
         document.getElementById("add-product-button").onclick = function () {
             addToCart(currentProduct.name, currentProduct.price, currentProduct.images[0]);
         };
-
+    
         const thumbnails = document.getElementById("thumbnail-column");
         thumbnails.innerHTML = "";
-
+    
         currentProduct.images.forEach(function (image, index) {
             const thumb = document.createElement("img");
             thumb.src = image;
@@ -256,7 +262,7 @@ function displayCartItems() {
             thumb.onclick = function () {
                 selectProductImage(index);
             };
-
+    
             thumbnails.appendChild(thumb);
         });
     }
