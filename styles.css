@@ -61,7 +61,7 @@ header {
 /* Contact */
 .contact {
     text-align: center;
-    padding: 80px 20px;
+    padding: 50px 20px;
 }
 
 .contact h2 {
@@ -689,4 +689,28 @@ body {
         grid-template-columns: 1fr;
     }
     
+}
+
+.shop-now-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 18px 50px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
+
+    color: white;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background: white;
+    color: black;
 }
