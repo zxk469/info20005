@@ -137,9 +137,12 @@ function displayCartItems() {
     }
 
     function applePayCheckout() {
-        if (cart.length === 0) {
-            showToast("Please add a bag to cart first.");
-            return;
+        if (currentProduct) {
+            addToCart(
+                currentProduct.name,
+                currentProduct.price,
+                currentProduct.images[0]
+            );
         }
 
         showToast("Apple Pay payment successful!");
@@ -147,9 +150,12 @@ function displayCartItems() {
     }
 
     function paypalCheckout() {
-        if(cart.length === 0) {
-            showToast("Please add a bag to cart first.");
-            return;
+        if(currentProduct) {
+            addToCart(
+                currentProduct.name,
+                currentProduct.price,
+                currentProduct.images[0]
+            );
         }
 
         showToast("PayPal payment successful!");
