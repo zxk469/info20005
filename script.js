@@ -223,7 +223,7 @@ function displayCartItems() {
 
     function loadProductPage() {
         const params = new URLSearchParams(window.location.search);
-        const productKey = params.get("product");
+        const productKey = params.get("product") || "clementine";
 
         if (!productKey || !products[productKey]) {
             return;
