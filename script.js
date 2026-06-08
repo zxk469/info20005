@@ -145,8 +145,7 @@ function displayCartItems() {
             );
         }
 
-        showToast("Apple Pay payment successful!");
-        clearCart();
+        window.location.href = "cart.html";
     }
 
     function paypalCheckout() {
@@ -158,8 +157,7 @@ function displayCartItems() {
             );
         }
 
-        showToast("PayPal payment successful!");
-        clearCart();
+        window.location.href = "cart.html";
     }
 
     //product image slider
