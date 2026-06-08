@@ -15,8 +15,9 @@ header {
 }
 
 .logo {
+    font-family: cursive;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 60px;
 }
 
 /* Hero */
@@ -42,7 +43,7 @@ header {
 /* About */
 .about {
     padding: 80px 20%;
-    background: white;
+    background: wheat;
     line-height: 1.8;
 }
 
@@ -57,11 +58,27 @@ header {
     font-size: 16px;
 }
 
+/* Contact */
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    color: white;
+    color: black;
     font-size: 14px;
 }
 
@@ -143,7 +160,7 @@ footer {
 .checkout-container {
     display: grid;
     grid-template-columns: 60% 40%;
-    min-height: 100vh;
+    gap: 30px;
 }
 
 .checkout-left {
@@ -157,7 +174,7 @@ footer {
     border-left: 1px solid #ddd;
 }
 
-.checkout.logo {
+.checkout-logo {
     text-align: center;
     margin-bottom: 40px;
 }
@@ -200,6 +217,32 @@ footer {
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 10px;
+}
+
+.applepay-option {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
 }
 
 .pay-now-btn {
@@ -272,7 +315,8 @@ footer {
 }
 
 .checkout-logo {
-    font-size: 40px;
+    font-family: cursive;
+    font-size: 60px;
     margin: 0;
 }
 
@@ -298,7 +342,7 @@ footer {
 .thumbnail-column {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .thumbnail-column img {
@@ -359,7 +403,7 @@ footer {
     margin-bottom: 35px;
 }
 
-.product-info button {
+.add-cart-btn {
     width: 100%;
     padding: 18px;
     background: white;
@@ -369,7 +413,7 @@ footer {
     font-size: 16px;
 }
 
-.product-info button:hover {
+.add-cart-btn:hover {
     background: black;
     color: white;
 }
@@ -432,4 +476,217 @@ footer {
     #product-description {
         font-size: 22px;
     }
+}
+
+.or-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 28px 0;
+}
+
+.or-line span {
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.or-line p {
+    color: #777;
+}
+
+.add-cart-btn {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #777;
+    border-radius: 40px;
+    background: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.apple-pay-btn {
+    width: 100%;
+    padding: 18px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 22px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.paypal-btn {
+    width: 100%;
+    padding: 18px;
+    background: #ffc439;
+    color: #003087;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.more-payment {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: purple;
+}
+
+.express-title {
+    text-align: center;
+    color: #777;
+}
+
+.express-checkout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.express-checkout button {
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.shop-pay-btn {
+    background: #5a31f4;
+    color: white;
+}
+
+.paypal-express-btn {
+    background: #ffc439;
+    color: #003087;
+}
+
+.gpay-btn {
+    background: black;
+    color: white;
+}
+
+.payment-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-logos img {
+    width: 58px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    padding: 3px;
+}
+
+.extra-cards {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive fixes */
+body {
+    overflow-x: hidden;
+}
+
+.product-page,
+.checkout-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Split screen or tablet size */
+@media (max-width: 1200px) {
+
+    .product-page {
+        grid-template-columns: 90px 1fr;
+        padding: 30px;
+    }
+
+    .product-info {
+        grid-column: span 2;
+        padding: 20px 0;
+    }
+
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-left,
+    .checkout-right {
+        padding: 30px;
+    }
+}
+
+/* Mobile screen */
+@media (max-width: 768px) {
+
+    header,
+    .checkout-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav,
+    .checkout-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-page {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .thumbnail-column {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .main-product-image {
+        height: 420px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .express-checkout {
+        grid-template-columns: 1fr;
+    }
+    
 }

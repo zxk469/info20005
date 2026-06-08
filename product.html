@@ -22,15 +22,14 @@
  
  <section class="product-page">
 
-    <div class="thumbnail-column">
-        <img id="thumb1" src="" alt="">
-        <img id="thumb2" src="" alt="">
-        <img id="thumb3" src="" alt="">
-        <img id="thumb4" src="" alt="">
-    </div>
+    <div class="thumbnail-column" id="thumbnail-column"></div>
 
     <div class="main-product-image">
-        <img id="main-product-image" src="" alt="">
+        <button class="arrow left-arrow" onclick="previousProductImage()">Previous</button>
+
+        <img id="main-product-image" src="" alt="Product image">
+
+        <button class="arrow right-arrow" onclick="nextProductImage()">Next</button>
     </div>
 
     <div class="product-info">
@@ -40,7 +39,19 @@
 
         <p id="product-description">Handmade luxury bag crafted with conscious design and premium materials.</p>
 
-        <button id="add-product-button">Add to Cart</button>
+        <button id="add-product-button" class="add-cart-btn">Add to Cart</button>
+
+        <div class="or-line">
+            <span></span>
+            <p>OR</p>
+            <span></span>
+        </div>
+
+        <button class="apple-pay-btn" onclick="applePayCheckout()">Buy with  Pay</button>
+
+        <button class="paypal-btn" onclick="paypalCheckout()">Buy with <strong>PayPal</strong></button>
+
+        <a href="cart.html" class="more-payment">More payment options</a>
     </div>
  </section>
 

@@ -122,7 +122,7 @@ function displayCartItems() {
             return;
         }
 
-        if (!fullName.value || !address.value || !city.value || !postcode.value) {
+        if (!firstName.value || !lastName.value || !address.value || !city.value || !postcode.value) {
             alert("Please complete your delivery details.");
             return;
         }
@@ -132,7 +132,27 @@ function displayCartItems() {
             return;
         }
 
-        alert("Thank you for your order, " + fullName.value + "!");
+        showToast("Thank you for your order, " + firstName.value + "!");
+        clearCart();
+    }
+
+    function applePayCheckout() {
+        if (cart.length === 0) {
+            showToast("Please add a bag to cart first.");
+            return;
+        }
+
+        showToast("Apple Pay payment successful!");
+        clearCart();
+    }
+
+    function paypalCheckout() {
+        if(cart.length === 0) {
+            showToast("Please add a bag to cart first.");
+            return;
+        }
+
+        showToast("PayPal payment successful!");
         clearCart();
     }
 
@@ -224,9 +244,14 @@ function displayCartItems() {
         thumbnails.innerHTML = "";
 
         currentProduct.images.forEach(function (image, index) {
-            thumbnails.innerHTML += `
-            <img src="${image}" onclick="selectProductImage(${index})" alt="Product thumbnail"> 
-            `;
+            const thumb = document.createElement("img");
+            thumb.src = image;
+            thumb.alt = "Product thumbnail";
+            thumb.onclick = function () {
+                selectProductImage(index);
+            };
+
+            thumbnails.appendChild(thumb);
         });
     }
 

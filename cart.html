@@ -30,6 +30,20 @@
             <p>You have qualified for free shipping!</p>
         </div>
 
+        <h3 class="express-title">Express checkout</h3>
+
+        <div class="express-checkout">
+            <button class="shop-pay-btn">shop</button>
+            <button class="paypal-express-btn">PayPal</button>
+            <button class="gpay-btn">G Pay</button>
+        </div>
+
+        <div class="or-line">
+            <span></span>
+            <p>OR</p>
+            <span></span>
+        </div>
+
         <h2>Contact</h2>
 
         <input id ="email" type="email" placeholder="Email">
@@ -58,9 +72,22 @@
 
         <div class="payment-card">
 
-            <label>
-                <input type="radio" name="payment" checked>
+            <label class="payment-title">
+                <span>
+                    <input type="radio" name="payment" checked>
                 Credit Card
+                </span>
+
+                <span class="card-logos">
+                    
+                    <img src="https://www.thehorse.com.au/cdn/shopifycloud/checkout-web/assets/c1/assets/visa.sxIq5Dot.svg" alt="Visa">
+
+                    <img src="https://www.thehorse.com.au/cdn/shopifycloud/checkout-web/assets/c1/assets/mastercard.1c4_lyMp.svg" alt="Mastercard">
+
+                    <img src="https://www.thehorse.com.au/cdn/shopifycloud/checkout-web/assets/c1/assets/amex.Csr7hRoy.svg" alt="Amex">
+
+                    <span class="extra-cards">+2</span>
+                </span>
             </label>
 
             <input placeholder="Card Number">
@@ -77,6 +104,13 @@
             <label>
                 <input type="radio" name="payment">
                 Paypal
+            </label>
+        </div>
+
+        <div class="applepay-option">
+            <label>
+                <input type="radio" name="payment">
+                Apple Pay
             </label>
         </div>
 
